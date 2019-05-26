@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="中文">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="上一节学习了用户体验思维&amp;amp;逻辑思维，数据思维和商业思维在产品经理的思维能力要求里也占据着很重要的地位，在每一个互联网的JD中都有一句话：对数据敏感，由此可见数据思维的重要性。同时，一个成功的产品必定具有商业价值，如何思考产品的商业闭环也极为重要。   一、数据思维1、什么是数据思维：我们所作出的判断和结论都基于数据，对数据敏感，且善于应用数据。 2、产品新人接触数据时的常见问题：（1）、">
+<meta name="keywords" content="PM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据思维&amp;商业思维">
+<meta property="og:url" content="http://VickyDYY.github.io/2019/05/26/Data-Business-Thought/index.html">
+<meta property="og:site_name" content="小颖のBlog">
+<meta property="og:description" content="上一节学习了用户体验思维&amp;amp;逻辑思维，数据思维和商业思维在产品经理的思维能力要求里也占据着很重要的地位，在每一个互联网的JD中都有一句话：对数据敏感，由此可见数据思维的重要性。同时，一个成功的产品必定具有商业价值，如何思考产品的商业闭环也极为重要。   一、数据思维1、什么是数据思维：我们所作出的判断和结论都基于数据，对数据敏感，且善于应用数据。 2、产品新人接触数据时的常见问题：（1）、">
+<meta property="og:locale" content="中文">
+<meta property="og:image" content="http://vickydyy.github.io/2019/05/26/Data-Business-Thought/1.png">
+<meta property="og:image" content="http://vickydyy.github.io/2019/05/26/Data-Business-Thought/2.png">
+<meta property="og:image" content="http://vickydyy.github.io/2019/05/26/Data-Business-Thought/6.png">
+<meta property="og:image" content="http://vickydyy.github.io/2019/05/26/Data-Business-Thought/5.png">
+<meta property="og:image" content="http://vickydyy.github.io/2019/05/26/Data-Business-Thought/3.png">
+<meta property="og:image" content="http://vickydyy.github.io/2019/05/26/Data-Business-Thought/4.png">
+<meta property="og:updated_time" content="2019-05-26T14:25:32.181Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据思维&amp;商业思维">
+<meta name="twitter:description" content="上一节学习了用户体验思维&amp;amp;逻辑思维，数据思维和商业思维在产品经理的思维能力要求里也占据着很重要的地位，在每一个互联网的JD中都有一句话：对数据敏感，由此可见数据思维的重要性。同时，一个成功的产品必定具有商业价值，如何思考产品的商业闭环也极为重要。   一、数据思维1、什么是数据思维：我们所作出的判断和结论都基于数据，对数据敏感，且善于应用数据。 2、产品新人接触数据时的常见问题：（1）、">
+<meta name="twitter:image" content="http://vickydyy.github.io/2019/05/26/Data-Business-Thought/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://VickyDYY.github.io/2019/05/26/Data-Business-Thought/">
+
+
+
+
+
+  <title>数据思维&商业思维 | 小颖のBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="中文">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小颖のBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">目前暂时为小颖的PM学习之旅</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://VickyDYY.github.io/2019/05/26/Data-Business-Thought/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vicky DYY">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖のBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据思维&商业思维</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-26T17:47:52+08:00">
+                2019-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>上一节学习了用户体验思维&amp;逻辑思维，数据思维和商业思维在产品经理的思维能力要求里也占据着很重要的地位，在每一个互联网的JD中都有一句话：对数据敏感，由此可见数据思维的重要性。同时，一个成功的产品必定具有商业价值，如何思考产品的商业闭环也极为重要。</p>
+</blockquote>
+<hr>
+<h3 id="一、数据思维"><a href="#一、数据思维" class="headerlink" title="一、数据思维"></a>一、数据思维</h3><h4 id="1、什么是数据思维："><a href="#1、什么是数据思维：" class="headerlink" title="1、什么是数据思维："></a>1、什么是数据思维：</h4><p>我们所作出的判断和结论都基于数据，对数据敏感，且善于应用数据。</p>
+<h4 id="2、产品新人接触数据时的常见问题："><a href="#2、产品新人接触数据时的常见问题：" class="headerlink" title="2、产品新人接触数据时的常见问题："></a>2、产品新人接触数据时的常见问题：</h4><p>（1）、接手原始数据记录——不知道如何处理</p>
+<p>（2）、专业名词（例：DAU、MAU、ARPU等）弄不懂</p>
+<p>（3）、对数据的理解狭隘、不深入、找不到关键点</p>
+<p>（4）、进行数据分析时，缺少侧重无头绪</p>
+<h4 id="3、为什么需要数据思维："><a href="#3、为什么需要数据思维：" class="headerlink" title="3、为什么需要数据思维："></a>3、为什么需要数据思维：</h4><p>（1）、通过数据评估、改进工作（复盘）</p>
+<p>（2）、通过数据找到问题来源（指南针）</p>
+<p>（3）、通过数据测算产品现状（工作经验）</p>
+<h4 id="4、如何培养数据思维"><a href="#4、如何培养数据思维" class="headerlink" title="4、如何培养数据思维"></a>4、如何培养数据思维</h4><p>（1）、建立”以数据为导向”的行动习惯：</p>
+<ul>
+<li><p>数据埋点、描述问题、提供战略依据</p>
+</li>
+<li><p>发现问题、挖掘本质、明确产品优化方向</p>
+</li>
+<li><p>方向清晰、评估、复盘成效</p>
+</li>
+</ul>
+<p>（2）明确数据分析的4个步骤：</p>
+<ul>
+<li>What———描述性分析</li>
+<li>Why————判断性分析</li>
+<li>What will——预测性分析</li>
+<li>Do！———指导性分析</li>
+</ul>
+<p>（3）根据”数据模型”分析数据：</p>
+<p>例：漏斗模型</p>
+<p><img src="//VickyDYY.github.io/2019/05/26/Data-Business-Thought/1.png" alt></p>
+<p>具体步骤为：</p>
+<ul>
+<li>确定业务场景</li>
+<li>抽象成模型（用户经历的行为路径）</li>
+<li>核心指标（渠道ID、PV、UV、停留时间、转化率、跳失率）</li>
+</ul>
+<p>案例分析：如何提升某APP的阅读量</p>
+<ul>
+<li><p>确定业务场景（阅读）的每个环节步骤</p>
+</li>
+<li><p>收集每个环节的数据（PV、点击次数、AVE）</p>
+</li>
+<li>画成漏斗，根据数据计算每个环境的转化率</li>
+</ul>
+<p>（4）系统化思维</p>
+<ul>
+<li>构建一个产品的数据体系<ul>
+<li>定义核心指标(与产品形式有关)</li>
+<li>定义影响核心指标的因素和模块</li>
+</ul>
+</li>
+<li>使用 <strong>流程图/鱼骨图</strong>梳理产品内各模块的相互影响</li>
+</ul>
+<hr>
+<h3 id="二、商业思维"><a href="#二、商业思维" class="headerlink" title="二、商业思维"></a>二、商业思维</h3><p>1、What—什么是商业思维？</p>
+<ul>
+<li>一种提供 <strong>产品和服务</strong>的 <strong>经济性质</strong>的思考方式</li>
+<li>通俗：如何让用户开心的同时，企业能获得盈利</li>
+<li>狭义：成本思维，算好账（CAC、ARPU、LTV）</li>
+<li>广义：思考产品的商业闭环</li>
+</ul>
+<p>2、How—-如何培养商业思维？</p>
+<p>参考下图进行商业闭环设计：</p>
+<p><img src="//VickyDYY.github.io/2019/05/26/Data-Business-Thought/2.png" alt></p>
+<hr>
+<h3 id="三、实战演练"><a href="#三、实战演练" class="headerlink" title="三、实战演练"></a>三、实战演练</h3><h5 id="1、最近一段时间，某网站的产品经理发现：官网的总体注册转化率一直维持在6-左右，通过下图数据，帮助分析问题来源："><a href="#1、最近一段时间，某网站的产品经理发现：官网的总体注册转化率一直维持在6-左右，通过下图数据，帮助分析问题来源：" class="headerlink" title="1、最近一段时间，某网站的产品经理发现：官网的总体注册转化率一直维持在6%左右，通过下图数据，帮助分析问题来源："></a>1、最近一段时间，某网站的产品经理发现：官网的总体注册转化率一直维持在6%左右，通过下图数据，帮助分析问题来源：</h5><p><img src="//VickyDYY.github.io/2019/05/26/Data-Business-Thought/6.png" alt></p>
+<p>【参考答案】</p>
+<p>两个浏览器的官网首页浏览量相差不大，邮箱注册页面访问 - 完善页面信息访问 - 提交信息页面访问的环节，转化率都相差不大，没有明显问题。但是官网首页浏览 - 邮箱注册页面访问环节，IE浏览器的转化率只有4.29%，并且网站的总体注册转化率是6%，但是使用Chrome浏览器的新用户注册转化率高达12%，使用IE浏览器的新用户注册转化率才1%。</p>
+<p>这样一分析的话，问题就很明显了，极有可能是浏览器兼容性的问题，产品经理发现问题后应该重点关注并尝试解决。</p>
+<p>【我的答案】</p>
+<p><img src="//VickyDYY.github.io/2019/05/26/Data-Business-Thought/5.png" alt></p>
+<p><img src="//VickyDYY.github.io/2019/05/26/Data-Business-Thought/3.png" alt></p>
+<h5 id="2、分析一款目标企业的产品，并用商业画布进行拆解和分析"><a href="#2、分析一款目标企业的产品，并用商业画布进行拆解和分析" class="headerlink" title="2、分析一款目标企业的产品，并用商业画布进行拆解和分析"></a>2、分析一款目标企业的产品，并用商业画布进行拆解和分析</h5><p>【我的解析】</p>
+<p><img src="//VickyDYY.github.io/2019/05/26/Data-Business-Thought/4.png" alt></p>
+<hr>
+<h3 id="四、推荐阅读"><a href="#四、推荐阅读" class="headerlink" title="四、推荐阅读"></a>四、推荐阅读</h3><p>《结网》</p>
+<p>《免费：商业的未来》</p>
+<p>《浪潮之巅》</p>
+<p>《精益创业》</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/26/Product-User-Thought/" rel="next" title="用户体验思维&逻辑思维">
+                <i class="fa fa-chevron-left"></i> 用户体验思维&逻辑思维
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Vicky DYY</p>
+              <p class="site-description motion-element" itemprop="description">个人PM学习充电站</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、数据思维"><span class="nav-number">1.</span> <span class="nav-text">一、数据思维</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、什么是数据思维："><span class="nav-number">1.1.</span> <span class="nav-text">1、什么是数据思维：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、产品新人接触数据时的常见问题："><span class="nav-number">1.2.</span> <span class="nav-text">2、产品新人接触数据时的常见问题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、为什么需要数据思维："><span class="nav-number">1.3.</span> <span class="nav-text">3、为什么需要数据思维：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、如何培养数据思维"><span class="nav-number">1.4.</span> <span class="nav-text">4、如何培养数据思维</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、商业思维"><span class="nav-number">2.</span> <span class="nav-text">二、商业思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、实战演练"><span class="nav-number">3.</span> <span class="nav-text">三、实战演练</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、最近一段时间，某网站的产品经理发现：官网的总体注册转化率一直维持在6-左右，通过下图数据，帮助分析问题来源："><span class="nav-number">3.0.1.</span> <span class="nav-text">1、最近一段时间，某网站的产品经理发现：官网的总体注册转化率一直维持在6%左右，通过下图数据，帮助分析问题来源：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、分析一款目标企业的产品，并用商业画布进行拆解和分析"><span class="nav-number">3.0.2.</span> <span class="nav-text">2、分析一款目标企业的产品，并用商业画布进行拆解和分析</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#四、推荐阅读"><span class="nav-number">4.</span> <span class="nav-text">四、推荐阅读</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Vicky DYY</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
