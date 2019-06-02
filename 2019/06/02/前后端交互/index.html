@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="中文">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="产品学习,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="如今用户体验、逻辑等产品思维和类似需求分析、PRD撰写的产品技能越来越成为产品经理的基本技能，企业更加注重T型人才的培养。我是软件工程的背景，希望以后可以做偏技术方面的产品经理，同时增强自己的竞争力。互联网的产品设计，靠需求推动，由技术落地，产品被设计出来，技术上的可行性是产品经理需要考虑的重点之一。因此产品经理懂技术从长远来看，也是开发、迭代产品中必要的一环。 今天希望根据自己浅薄的知识和网上">
+<meta name="keywords" content="产品学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前后端交互">
+<meta property="og:url" content="http://VickyDYY.github.io/2019/06/02/前后端交互/index.html">
+<meta property="og:site_name" content="小颖のBlog">
+<meta property="og:description" content="如今用户体验、逻辑等产品思维和类似需求分析、PRD撰写的产品技能越来越成为产品经理的基本技能，企业更加注重T型人才的培养。我是软件工程的背景，希望以后可以做偏技术方面的产品经理，同时增强自己的竞争力。互联网的产品设计，靠需求推动，由技术落地，产品被设计出来，技术上的可行性是产品经理需要考虑的重点之一。因此产品经理懂技术从长远来看，也是开发、迭代产品中必要的一环。 今天希望根据自己浅薄的知识和网上">
+<meta property="og:locale" content="中文">
+<meta property="og:updated_time" content="2019-06-02T07:41:54.576Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前后端交互">
+<meta name="twitter:description" content="如今用户体验、逻辑等产品思维和类似需求分析、PRD撰写的产品技能越来越成为产品经理的基本技能，企业更加注重T型人才的培养。我是软件工程的背景，希望以后可以做偏技术方面的产品经理，同时增强自己的竞争力。互联网的产品设计，靠需求推动，由技术落地，产品被设计出来，技术上的可行性是产品经理需要考虑的重点之一。因此产品经理懂技术从长远来看，也是开发、迭代产品中必要的一环。 今天希望根据自己浅薄的知识和网上">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://VickyDYY.github.io/2019/06/02/前后端交互/">
+
+
+
+
+
+  <title>前后端交互 | 小颖のBlog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="中文">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小颖のBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一块自留地，记录小颖的PM学习之旅</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-关于">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-文章分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            文章分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://VickyDYY.github.io/2019/06/02/前后端交互/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vicky 小颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖のBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前后端交互</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-02T14:15:48+08:00">
+                2019-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/产品学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">产品学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>如今用户体验、逻辑等产品思维和类似需求分析、PRD撰写的产品技能越来越成为产品经理的基本技能，企业更加注重T型人才的培养。我是软件工程的背景，希望以后可以做偏技术方面的产品经理，同时增强自己的竞争力。互联网的产品设计，靠需求推动，由技术落地，产品被设计出来，技术上的可行性是产品经理需要考虑的重点之一。因此产品经理懂技术从长远来看，也是开发、迭代产品中必要的一环。</p>
+<p>今天希望根据自己浅薄的知识和网上的参考资料，小小的总结一下前后端交互的问题。</p>
+</blockquote>
+<hr>
+<h3 id="一、什么是前后端交互？"><a href="#一、什么是前后端交互？" class="headerlink" title="一、什么是前后端交互？"></a>一、什么是前后端交互？</h3><h5 id="1、首先，我们需要理解什么是前后端分离："><a href="#1、首先，我们需要理解什么是前后端分离：" class="headerlink" title="1、首先，我们需要理解什么是前后端分离："></a>1、首先，我们需要理解什么是前后端分离：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">前后端分离是一种架构模式，说通俗点就是后端项目里面看不到页面（JSP|HTML）,后端给前端提供接口，前端调用后端提供的REST风格接口就行，前端专注写页面（html|jsp）和渲染（JS|CSS|各种前端框架）；后端专注写代码就行。</span><br><span class="line">前后端分离的核心：后台提供数据，前端负责显示</span><br></pre></td></tr></table></figure>
+<p>ps: 参考文章：<a href="http://www.importnew.com/21589.html" target="_blank" rel="noopener">从MVC到前后端分离</a></p>
+<h5 id="2、前后端交互的原理："><a href="#2、前后端交互的原理：" class="headerlink" title="2、前后端交互的原理："></a>2、前后端交互的原理：</h5><p>前端根据<font color="red">接口</font>，提供请求参数，后端接收参数，根据参数查询数据库，并得到返回的数据，将返回的参数送到前端。前端调用接口，将返回的数据呈现。</p>
+<h5 id="3、前后端交互细节："><a href="#3、前后端交互细节：" class="headerlink" title="3、前后端交互细节："></a>3、前后端交互细节：</h5><p>参考文章链接：<a href="https://blog.csdn.net/shuo1992/article/details/58615465" target="_blank" rel="noopener">https://blog.csdn.net/shuo1992/article/details/58615465</a></p>
+<p>（1）前端提供请求数据：前端提供查询参数（URL请求参数）（URL由后台写好给前端）</p>
+<p>（2）后端设计&amp;修改接口文档：因为后端跟数据库进行直接的交互，前端只是数据的接受者，接口文档的使用者</p>
+<p>（3）交互数据的格式：主要用<font color="red">JSON</font>进行交互，现在流行的<font color="red">AJAX</font>也是通过JSON完成。JSON通常用于与服务端交换数据，在接受服务器数据时一般是字符串</p>
+<p>（4）请求方法：POST和GET，GET是向服务器发送索取数据的请求，POST是向服务器提交数据（表单）</p>
+<hr>
+<h3 id="二、熟悉几个概念"><a href="#二、熟悉几个概念" class="headerlink" title="二、熟悉几个概念"></a>二、熟悉几个概念</h3><h5 id="1、什么是接口？"><a href="#1、什么是接口？" class="headerlink" title="1、什么是接口？"></a>1、什么是接口？</h5><p><strong>接口就是提供具体能力的一个标准和抽象，是一些预先定义的函数，包括接口地址、传入参数和返回参数和数据。</strong>可以简单理解为，当需要访问某些数据，正常状态下传入合格参数，会收到该数据范围内的返回参数。前后台的交互基本都是通过程序接口实现的。</p>
+<h5 id="2、什么是JSON？"><a href="#2、什么是JSON？" class="headerlink" title="2、什么是JSON？"></a>2、什么是JSON？</h5><p>JSON(JavaScript Object Notation,) 是一种轻量级的数据交换格式，采用完全独立于编程语言的文本格式来存储和表示数据。简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。 易于阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。</p>
+<p>在进行前后端交互时，多数用的是JSON。</p>
+<h5 id="3、什么是AJAX？"><a href="#3、什么是AJAX？" class="headerlink" title="3、什么是AJAX？"></a>3、什么是AJAX？</h5><p>Ajax，即异步JavaScript和XML，是一种创建交互式网页应用的网页开发技术。通过在后台与服务器进行少量数据交换，Ajax可以使网页实现异步更新，这意味着可以在不重新加载整个网页的情况下，对网页的部分进行加载更新。</p>
+<p>Ajax 的优点在于它在浏览器与web服务器之间使用异步数据传输（HTTP请求），不阻塞用户，核心对象是XMLHTTPRequest。通过这个对象，<strong>js可在不重新加载页面的情况下与web服务器交换数据</strong>。</p>
+<hr>
+<h3 id="三、如何进行前后端交互？（实例说明【转】）"><a href="#三、如何进行前后端交互？（实例说明【转】）" class="headerlink" title="三、如何进行前后端交互？（实例说明【转】）"></a>三、如何进行前后端交互？（实例说明【转】）</h3><p>PS：以下例子均为用AJAX实现前后端交互</p>
+<p>【例1】参考文章链接：<a href="http://www.woshipm.com/pd/855233.html" target="_blank" rel="noopener">http://www.woshipm.com/pd/855233.html</a></p>
+<p>【例1】：一个网站的登录功能，我们通过ajax（可以在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页）加载服务器数据的过程再来体验一下前后台数据交互的过程。</p>
+<p>我们先给登录名和登录密码的文本框起两个名字，即UserName，PassWord。</p>
+<p>前端代码（解析）如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line"></span><br><span class="line">‘url’:’login.php’,  #和之前的URL一样，前端把参数传递到什么位置</span><br><span class="line"></span><br><span class="line">‘data’:&#123;“username”:$(&apos;#UserName&apos;).val(),&quot;PassWord&quot;:$(‘#password’).val(),&#125;,  #前端传递给后端的数据（用户名和密码）</span><br><span class="line"></span><br><span class="line">‘success’:function(data)&#123;</span><br><span class="line"></span><br><span class="line">&#125;   #服务器返回数据成功的时候，前端需要如何操作（data中存的就是服务器返回的数据）</span><br><span class="line"></span><br><span class="line">‘type’:’post’  #数据传输的方法</span><br><span class="line"></span><br><span class="line">‘dataType’:’json’  #传递数据的类型，JSON</span><br><span class="line"></span><br><span class="line">&#125;）;</span><br></pre></td></tr></table></figure>
+<p>我们不用关心function（data）函数中具体的代码，无非就是：前端页面展示用户的用户名、页面状态变为已登录、展示用户相关数据等。</p>
+<p>后端代码过于复杂，我就不展示了，总之后端要做的处理就是：</p>
+<p>（1）拿到前端传递过来的数据（用户名和密码）和数据库中用户信息做比对</p>
+<p>（2）如果一致则返回给前台一个状态，并且返回用户的相关数据（昵称、个人信息、购物车信息、收藏的商品等等），这些数据同样是以JSON的形式传回给前端。</p>
+<p>（3）如果用户名或密码不一致，也返回给前端一个状态。</p>
+<p>（4）前端根据得到的状态做出页面的相应效果：登录按钮变为退出、显示用户昵称、显示购物车信息、显示收藏信息、登录框隐藏等，如果用户名密码不匹配则显示相应的提示信息。</p>
+<p>【例2】参考文章链接【戳】：<a href="https://blog.csdn.net/weixin_42228338/article/details/80508138" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42228338/article/details/80508138</a></p>
+<hr>
+<h3 id="四、补充"><a href="#四、补充" class="headerlink" title="四、补充"></a>四、补充</h3><p>参考文章：</p>
+<p><a href="http://www.woshipm.com/ucd/1051915.html" target="_blank" rel="noopener">关于Ajax和websocket，你应该知道的事儿</a></p>
+<p><a href="https://www.cnblogs.com/naniandongzhi/p/7953790.html" target="_blank" rel="noopener">前后端数据交互的几个方法</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/产品学习/" rel="tag"># 产品学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/01/北森相关信息（写在面试前）/" rel="next" title="北森相关信息（写在面试前）">
+                <i class="fa fa-chevron-left"></i> 北森相关信息（写在面试前）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Vicky 小颖</p>
+              <p class="site-description motion-element" itemprop="description">个人PM学习充电站</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、什么是前后端交互？"><span class="nav-number">1.</span> <span class="nav-text">一、什么是前后端交互？</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、首先，我们需要理解什么是前后端分离："><span class="nav-number">1.0.1.</span> <span class="nav-text">1、首先，我们需要理解什么是前后端分离：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、前后端交互的原理："><span class="nav-number">1.0.2.</span> <span class="nav-text">2、前后端交互的原理：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、前后端交互细节："><span class="nav-number">1.0.3.</span> <span class="nav-text">3、前后端交互细节：</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#二、熟悉几个概念"><span class="nav-number">2.</span> <span class="nav-text">二、熟悉几个概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、什么是接口？"><span class="nav-number">2.0.1.</span> <span class="nav-text">1、什么是接口？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、什么是JSON？"><span class="nav-number">2.0.2.</span> <span class="nav-text">2、什么是JSON？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、什么是AJAX？"><span class="nav-number">2.0.3.</span> <span class="nav-text">3、什么是AJAX？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、如何进行前后端交互？（实例说明【转】）"><span class="nav-number">3.</span> <span class="nav-text">三、如何进行前后端交互？（实例说明【转】）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、补充"><span class="nav-number">4.</span> <span class="nav-text">四、补充</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Vicky 小颖</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+
+</body>
+</html>

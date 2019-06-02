@@ -263,6 +263,184 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://VickyDYY.github.io/2019/06/02/前后端交互/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Vicky 小颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖のBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/02/前后端交互/" itemprop="url">前后端交互</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-02T14:15:48+08:00">
+                2019-06-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/产品学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">产品学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>如今用户体验、逻辑等产品思维和类似需求分析、PRD撰写的产品技能越来越成为产品经理的基本技能，企业更加注重T型人才的培养。我是软件工程的背景，希望以后可以做偏技术方面的产品经理，同时增强自己的竞争力。互联网的产品设计，靠需求推动，由技术落地，产品被设计出来，技术上的可行性是产品经理需要考虑的重点之一。因此产品经理懂技术从长远来看，也是开发、迭代产品中必要的一环。</p>
+<p>今天希望根据自己浅薄的知识和网上的参考资料，小小的总结一下前后端交互的问题。</p>
+</blockquote>
+<hr>
+<h3 id="一、什么是前后端交互？"><a href="#一、什么是前后端交互？" class="headerlink" title="一、什么是前后端交互？"></a>一、什么是前后端交互？</h3><h5 id="1、首先，我们需要理解什么是前后端分离："><a href="#1、首先，我们需要理解什么是前后端分离：" class="headerlink" title="1、首先，我们需要理解什么是前后端分离："></a>1、首先，我们需要理解什么是前后端分离：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">前后端分离是一种架构模式，说通俗点就是后端项目里面看不到页面（JSP|HTML）,后端给前端提供接口，前端调用后端提供的REST风格接口就行，前端专注写页面（html|jsp）和渲染（JS|CSS|各种前端框架）；后端专注写代码就行。</span><br><span class="line">前后端分离的核心：后台提供数据，前端负责显示</span><br></pre></td></tr></table></figure>
+<p>ps: 参考文章：<a href="http://www.importnew.com/21589.html" target="_blank" rel="noopener">从MVC到前后端分离</a></p>
+<h5 id="2、前后端交互的原理："><a href="#2、前后端交互的原理：" class="headerlink" title="2、前后端交互的原理："></a>2、前后端交互的原理：</h5><p>前端根据<font color="red">接口</font>，提供请求参数，后端接收参数，根据参数查询数据库，并得到返回的数据，将返回的参数送到前端。前端调用接口，将返回的数据呈现。</p>
+<h5 id="3、前后端交互细节："><a href="#3、前后端交互细节：" class="headerlink" title="3、前后端交互细节："></a>3、前后端交互细节：</h5><p>参考文章链接：<a href="https://blog.csdn.net/shuo1992/article/details/58615465" target="_blank" rel="noopener">https://blog.csdn.net/shuo1992/article/details/58615465</a></p>
+<p>（1）前端提供请求数据：前端提供查询参数（URL请求参数）（URL由后台写好给前端）</p>
+<p>（2）后端设计&amp;修改接口文档：因为后端跟数据库进行直接的交互，前端只是数据的接受者，接口文档的使用者</p>
+<p>（3）交互数据的格式：主要用<font color="red">JSON</font>进行交互，现在流行的<font color="red">AJAX</font>也是通过JSON完成。JSON通常用于与服务端交换数据，在接受服务器数据时一般是字符串</p>
+<p>（4）请求方法：POST和GET，GET是向服务器发送索取数据的请求，POST是向服务器提交数据（表单）</p>
+<hr>
+<h3 id="二、熟悉几个概念"><a href="#二、熟悉几个概念" class="headerlink" title="二、熟悉几个概念"></a>二、熟悉几个概念</h3><h5 id="1、什么是接口？"><a href="#1、什么是接口？" class="headerlink" title="1、什么是接口？"></a>1、什么是接口？</h5><p><strong>接口就是提供具体能力的一个标准和抽象，是一些预先定义的函数，包括接口地址、传入参数和返回参数和数据。</strong>可以简单理解为，当需要访问某些数据，正常状态下传入合格参数，会收到该数据范围内的返回参数。前后台的交互基本都是通过程序接口实现的。</p>
+<h5 id="2、什么是JSON？"><a href="#2、什么是JSON？" class="headerlink" title="2、什么是JSON？"></a>2、什么是JSON？</h5><p>JSON(JavaScript Object Notation,) 是一种轻量级的数据交换格式，采用完全独立于编程语言的文本格式来存储和表示数据。简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。 易于阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。</p>
+<p>在进行前后端交互时，多数用的是JSON。</p>
+<h5 id="3、什么是AJAX？"><a href="#3、什么是AJAX？" class="headerlink" title="3、什么是AJAX？"></a>3、什么是AJAX？</h5><p>Ajax，即异步JavaScript和XML，是一种创建交互式网页应用的网页开发技术。通过在后台与服务器进行少量数据交换，Ajax可以使网页实现异步更新，这意味着可以在不重新加载整个网页的情况下，对网页的部分进行加载更新。</p>
+<p>Ajax 的优点在于它在浏览器与web服务器之间使用异步数据传输（HTTP请求），不阻塞用户，核心对象是XMLHTTPRequest。通过这个对象，<strong>js可在不重新加载页面的情况下与web服务器交换数据</strong>。</p>
+<hr>
+<h3 id="三、如何进行前后端交互？（实例说明【转】）"><a href="#三、如何进行前后端交互？（实例说明【转】）" class="headerlink" title="三、如何进行前后端交互？（实例说明【转】）"></a>三、如何进行前后端交互？（实例说明【转】）</h3><p>PS：以下例子均为用AJAX实现前后端交互</p>
+<p>【例1】参考文章链接：<a href="http://www.woshipm.com/pd/855233.html" target="_blank" rel="noopener">http://www.woshipm.com/pd/855233.html</a></p>
+<p>【例1】：一个网站的登录功能，我们通过ajax（可以在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页）加载服务器数据的过程再来体验一下前后台数据交互的过程。</p>
+<p>我们先给登录名和登录密码的文本框起两个名字，即UserName，PassWord。</p>
+<p>前端代码（解析）如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line"></span><br><span class="line">‘url’:’login.php’,  #和之前的URL一样，前端把参数传递到什么位置</span><br><span class="line"></span><br><span class="line">‘data’:&#123;“username”:$(&apos;#UserName&apos;).val(),&quot;PassWord&quot;:$(‘#password’).val(),&#125;,  #前端传递给后端的数据（用户名和密码）</span><br><span class="line"></span><br><span class="line">‘success’:function(data)&#123;</span><br><span class="line"></span><br><span class="line">&#125;   #服务器返回数据成功的时候，前端需要如何操作（data中存的就是服务器返回的数据）</span><br><span class="line"></span><br><span class="line">‘type’:’post’  #数据传输的方法</span><br><span class="line"></span><br><span class="line">‘dataType’:’json’  #传递数据的类型，JSON</span><br><span class="line"></span><br><span class="line">&#125;）;</span><br></pre></td></tr></table></figure>
+<p>我们不用关心function（data）函数中具体的代码，无非就是：前端页面展示用户的用户名、页面状态变为已登录、展示用户相关数据等。</p>
+<p>后端代码过于复杂，我就不展示了，总之后端要做的处理就是：</p>
+<p>（1）拿到前端传递过来的数据（用户名和密码）和数据库中用户信息做比对</p>
+<p>（2）如果一致则返回给前台一个状态，并且返回用户的相关数据（昵称、个人信息、购物车信息、收藏的商品等等），这些数据同样是以JSON的形式传回给前端。</p>
+<p>（3）如果用户名或密码不一致，也返回给前端一个状态。</p>
+<p>（4）前端根据得到的状态做出页面的相应效果：登录按钮变为退出、显示用户昵称、显示购物车信息、显示收藏信息、登录框隐藏等，如果用户名密码不匹配则显示相应的提示信息。</p>
+<p>【例2】参考文章链接【戳】：<a href="https://blog.csdn.net/weixin_42228338/article/details/80508138" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42228338/article/details/80508138</a></p>
+<hr>
+<h3 id="四、补充"><a href="#四、补充" class="headerlink" title="四、补充"></a>四、补充</h3><p>参考文章：</p>
+<p><a href="http://www.woshipm.com/ucd/1051915.html" target="_blank" rel="noopener">关于Ajax和websocket，你应该知道的事儿</a></p>
+<p><a href="https://www.cnblogs.com/naniandongzhi/p/7953790.html" target="_blank" rel="noopener">前后端数据交互的几个方法</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://VickyDYY.github.io/2019/06/01/北森相关信息（写在面试前）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -420,7 +598,18 @@
 <p>（6）自动高效的运维部署，全面实时的监控警告，智能主动的安全防御</p>
 <p>（7）方便与企业内部应用及第三方应用集成，实现数据互联互通</p>
 <hr>
-<h3 id="五、相关知识储备"><a href="#五、相关知识储备" class="headerlink" title="五、相关知识储备"></a>五、相关知识储备</h3><h5 id="1、什么是SaaS："><a href="#1、什么是SaaS：" class="headerlink" title="1、什么是SaaS："></a>1、什么是SaaS：</h5><p>SaaS是英文Soft as a Service（软件即服务）的简写。SaaS并不是指代一个行业或者一种技术，它是一种2B的专业型软件租赁使用模式。</p>
+<h3 id="五、北森的发展与商业模式"><a href="#五、北森的发展与商业模式" class="headerlink" title="五、北森的发展与商业模式"></a>五、北森的发展与商业模式</h3><blockquote>
+<p>​    一体化人才管理云平台供应商北森云计算宣布完成E轮融资，总金额超过1亿美金。本轮三家机构均为北森老股东，元生资本和经纬中国领投，红杉资本跟投。这是继上轮融资后，北森再创国内HR SaaS市场单笔融资额新高。</p>
+<p>　　据北森云计算联合创始人、CEO纪伟国透露，新一轮资金主要用于一体化人才管理云平台的产品和技术研发、客户成功体系的完善以及市场和业务创新等。</p>
+<p>　　北森创立于2002年，从人才测评切入人力资源管理领域，目前业务方面以覆盖测评、招聘、绩效、员工调查等业务流程一体化的SaaS软件服务为主，并辅以可满足企业定制化需求的PaaS平台。</p>
+</blockquote>
+<p>　　根据IDC关于中国公有云市场的分析，企业级SaaS市场依旧快速增长，年复合增长率超过35.7%，预计未来规模将会达到58.17亿美元。在国内HR SaaS这个领域内，在劳动力管理方面有“盖雅工厂”，薪资发放领域的“薪资通”，在招聘领域有“谷露软件、“猎上网”，考勤领域则有“上海劳勤COHO”，员工福利则有“内购网”，社保领域的“51社保”。</p>
+<p>　　与上述产品不同的是，北森定位中大型企业，并且在产品模式上聚焦人才一体化管理。在产品理念上，北森从传统的以管控为核心进而到强调以员工为核心，从识别和发展角度出发，帮助企业建立人才梯队。之所以定位中大型企业，纪伟国提到，中大型企业客户发展稳定，付费能力和意愿强，并且软件一体化需求是普遍痛点。</p>
+<p>　　北森产品形式落地为SaaS+PaaS服务模式，SaaS软件iTalent对企业提供包括人才测评、招聘管理、人才库、绩效、考勤休假等全栈式产品方案。并且，PaaS平台BeisenCloud可帮助企业客户根据业务需求和决策模型开发个性化软件。与此同时，北森打通了企业内部软件的接口，实现了包括薪资发放、电子签名、体检、差旅在内的功能与北森产品结合，最大化程度为企业提高用户体验，创造价值。</p>
+<p>　　关于未来发展，创始人告知36氪，北森将会继续加大在AI和大数据方面的投入。目前北森拥有两支数据团队：Ocean团队负责全平台、跨应用的数据一体化模型结构以及人才数据的敏捷、主题分析等;另一只团队负责AI的落地，已实现在人岗匹配、智能简历处理等领域的应用。</p>
+<p>　　根据年报，北森2017年营收2.3亿元，同比增长28.07%。创始人纪伟国告知36氪，截止目前北森拥有员工人数已近1500人，服务企业用户规模在5000余家，以大中型企业为主，覆盖在金融、房地产、汽车以及互联网等行业。</p>
+<hr>
+<h3 id="六、相关知识储备"><a href="#六、相关知识储备" class="headerlink" title="六、相关知识储备"></a>六、相关知识储备</h3><h5 id="1、什么是SaaS："><a href="#1、什么是SaaS：" class="headerlink" title="1、什么是SaaS："></a>1、什么是SaaS：</h5><p>SaaS是英文Soft as a Service（软件即服务）的简写。SaaS并不是指代一个行业或者一种技术，它是一种2B的专业型软件租赁使用模式。</p>
 <p>什么是专业型软件？</p>
 <p>就是为了解决特定行业或者企业特定问题而针对性开发的软件系统，比如快递行业的物流管理系统、餐饮行业的点餐系统、超市的收银系统、生产型企业的ERP系统、财务管理系统等。</p>
 <p>SaaS与传统软件服务最大的区别在于两点：</p>
@@ -459,16 +648,36 @@
 <h5 id="4、PaaS平台开发过程："><a href="#4、PaaS平台开发过程：" class="headerlink" title="4、PaaS平台开发过程："></a>4、PaaS平台开发过程：</h5><p>（1）创建个性化对象，添加人意类型对象字段，主从管理，对象关联</p>
 <p>（2）根据业务需要，自定义业务流程：触发条件、传入参数、完成条件、传出参数</p>
 <p>（3）创建个性化功能</p>
-<h5 id="3、什么是云计算："><a href="#3、什么是云计算：" class="headerlink" title="3、什么是云计算："></a>3、什么是云计算：</h5><p>云计算是一种模型，即将计算、网络和存储虚拟化资源池以按需的方式提供给有需要的人。</p>
+<h5 id="5、什么是云计算："><a href="#5、什么是云计算：" class="headerlink" title="5、什么是云计算："></a>5、什么是云计算：</h5><p>云计算是一种模型，即将计算、网络和存储虚拟化资源池以按需的方式提供给有需要的人。</p>
 <p>云计算的本质；资源到架构的全面弹性</p>
 <p>云计算的前提技术：</p>
 <p>（1）分布式计算</p>
 <p>（2）网格计算</p>
 <p>（3）并行计算</p>
 <p>（4）虚拟化</p>
-<hr>
-<h5 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h5><p>1、<a href="http://www.woshipm.com/pd/2052449.html" target="_blank" rel="noopener">《SaaS+PaaS|产品设计，如何满足用户个性化需求》</a></p>
+<h5 id="6、元数据："><a href="#6、元数据：" class="headerlink" title="6、元数据："></a>6、元数据：</h5><p>元数据（Meta Date），关于数据的数据或者叫做用来描述数据的数据或者叫做信息的信息。</p>
+<p> 这些定义都很是抽象，我们可以把元数据简单的理解成，<strong>最小的数据单位</strong>。元数据可以为数据说明其元素或属性（名称、大小、数据类型、等），或其结构（长度、字段、数据列），或其相关数据（位于何处、如何联系、拥有者）。</p>
+<p>通常情况下元数据可以分为以下三类：<strong>固有性元数据、管理性元数据、描述性元数据</strong>。</p>
+<ul>
+<li>固有性元数据；与事物构成有关的元数据。</li>
+<li>管理性元数据；与事物处理方式有关的元数据。</li>
+<li><p>描述性元数据；与事物本质有关的元数据。</p>
+<p><strong>元数据之于信息架构就像是房子的砖瓦</strong>，它可以根据需要摆放成不同的信息检索系统。元数据是所有组织系统的基础，从搜索到电子商务网站上的导航系统都强烈的依赖于元数据，<strong>元数据实际上是为产品的可查找性（Findability）服务的</strong>。</p>
+</li>
+</ul>
+<p>（PS：参考<a href="https://blog.csdn.net/it_man/article/details/8660536" target="_blank" rel="noopener">什么是元数据？</a>、<a href="https://blog.csdn.net/daryl715/article/details/1705576" target="_blank" rel="noopener">Web服务元数据简介</a>）</p>
+<h5 id="7、人工智能在HR领域的应用："><a href="#7、人工智能在HR领域的应用：" class="headerlink" title="7、人工智能在HR领域的应用："></a>7、人工智能在HR领域的应用：</h5><hr>
+<h5 id="参考学习文章："><a href="#参考学习文章：" class="headerlink" title="参考学习文章："></a>参考学习文章：</h5><p>1、<a href="http://www.woshipm.com/pd/2052449.html" target="_blank" rel="noopener">《SaaS+PaaS|产品设计，如何满足用户个性化需求》</a></p>
 <p>2、<a href="http://www.woshipm.com/ai/2097492.html" target="_blank" rel="noopener">入行半年，我这样看云计算</a></p>
+<p>3、<a href="http://www.woshipm.com/it/1242223.html" target="_blank" rel="noopener">中国云计算行业报告（一）</a></p>
+<p>4、<a href="http://www.woshipm.com/evaluating/442914.html" target="_blank" rel="noopener">2016中国云计算SaaS移动办公平台年度综合报告</a></p>
+<p>5、<a href="https://www.analysys.cn/article/analysis/detail/1000370" target="_blank" rel="noopener">专业化的HR SaaS服务正加速推动企业人力资本管理体系的建立</a></p>
+<p>6、<a href="http://www.woshipm.com/it/660597.html" target="_blank" rel="noopener">打开HR市场的真正钥匙：HR SaaS or 社群电商？</a></p>
+<h5 id="北森相关文章-资讯："><a href="#北森相关文章-资讯：" class="headerlink" title="北森相关文章+资讯："></a>北森相关文章+资讯：</h5><p>1、<a href="http://www.sohu.com/a/305119549_100188883" target="_blank" rel="noopener">北森CEO纪伟国：PaaS需要技术和业务的持续打磨，缺一不可</a></p>
+<p>2、<a href="http://blog.sina.com.cn/s/blog_548c47b80102wzym.html" target="_blank" rel="noopener">浅谈北森Paas平台 BeisenCloud</a></p>
+<p>3、<a href="https://www.jianshu.com/p/f84e43a6f5ff" target="_blank" rel="noopener">专访北森云计算CEO纪伟国：解读SaaS+PaaS的云上发展路径</a></p>
+<p>4、<a href="https://www.csdn.net/article/a/2015-08-24/15827477" target="_blank" rel="noopener">北森深度详解：如何用PaaS平台重新定义HR SaaS软件？</a></p>
+<p>5、<a href="https://blog.csdn.net/everlasting_188/article/details/79661203" target="_blank" rel="noopener">PaaS架构解析</a></p>
 
           
         
@@ -2103,7 +2312,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
